@@ -80,6 +80,7 @@ func (c *Command) WriteTo(w io.Writer) (int64, error) {
 	return total, nil
 }
 
+// Identify 创建一个新的命令用来提供客户端的信息,连接成功(客户端连接nsqd或者nsqd连接lookupd)后这个消息通常是第一个要发送的消息。
 // Identify creates a new Command to provide information about the client.  After connecting,
 // it is generally the first message sent.
 //
